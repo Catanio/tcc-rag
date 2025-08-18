@@ -2,7 +2,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from typing import List
 
-class CorpusTranslator:
+class Translator:
     def __init__(self, model_name: str, batch_size: int = 32):
         
         print(f"Starting translation with model: {model_name}")
@@ -16,20 +16,20 @@ class CorpusTranslator:
         self.batch_size = batch_size
 
     def translate_batch(self, 
-                        texts_pt: List[str], 
+                        texts: List[str], 
                         src_lang: str = "por_Latn", 
                         tgt_lang: str = "eng_Latn",
                         max_length: int = 512) -> List[str]:
 
-        if not texts_pt:
+        if not texts:
             return []
 
         self.tokenizer.src_lang = src_lang
 
         inputs = self.tokenizer(
-            texts_pt, 
-            return_tensors="pt", 
-            padding=True, 
+            texts,
+            return_tensors="pt",
+            padding=True,
             truncation=True,
             max_length=max_length
         ).to(self.device)
