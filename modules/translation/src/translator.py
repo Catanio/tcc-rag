@@ -42,7 +42,7 @@ class Translator:
                 **inputs,
                 forced_bos_token_id=forced_bos_token_id,
                 num_beams=5,  # Beam search for better quality
-                max_length=512
+                max_length=max_length
             )
 
         # Decode tokens to text
