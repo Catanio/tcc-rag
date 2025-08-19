@@ -2,7 +2,11 @@ from translator import CorpusTranslator
 
 def translate_example():
     model_name = "facebook/nllb-200-distilled-600M"
-    translator = CorpusTranslator(model_name, batch_size=4)
+from translator import Translator
+
+def translate_example():
+    model_name = "facebook/nllb-200-distilled-600M"
+    translator = Translator(model_name, batch_size=4)
     
     test_phrases = [
         "Olá, como você está?",
