@@ -41,7 +41,7 @@ class Translator:
             translated_tokens = self.model.generate(
                 **inputs,
                 forced_bos_token_id=forced_bos_token_id,
-                num_beams=5,  # Beam search para melhor qualidade
+                num_beams=5,  # Beam search for better quality
                 max_length=512
             )
 
