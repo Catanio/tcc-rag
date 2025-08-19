@@ -4,7 +4,6 @@ from typing import List, Tuple, Literal
 import torch
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModelForMaskedLM
-from dotenv import load_dotenv
 from . import config
 
 class SpladeEncoder:
