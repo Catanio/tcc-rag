@@ -1,4 +1,4 @@
-from translator import CorpusTranslator
+from translator import Translator
 
 def translate_example():
     model_name = "facebook/nllb-200-distilled-600M"
