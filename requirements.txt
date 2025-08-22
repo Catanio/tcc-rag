@@ -1,0 +1,9 @@
+# --- Core Deep Learning & NLP ---
+transformers
+torch
+
+# --- Hugging Face Integration ---
+huggingface-hub
+
+# --- Environment & Configuration ---
+python-dotenv
